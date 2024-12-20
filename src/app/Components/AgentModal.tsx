@@ -21,9 +21,8 @@ export default function AgentModal({ isOpen, onClose }: Props) {
         <Modal hideBackdrop={true} open={isOpen} onClose={onClose} sx={{ backdropFilter: "blur(5px)" }}>
             <div className="fixed inset-0 flex items-center justify-center">
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
-                <div className="w-[900px] relative z-50">
-                    <div className="bg-[#f4f6f8] relative w-[900px] max-h-[900px] modal-container overflow-auto rounded-2xl px-10 p-6 z-40">
-
+                <div className="w-full lg:w-[900px] relative z-50 px-3 ">
+                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl px-10 p-6 z-40">
                         <div className="flex flex-col gap-4">
                             <div className="flex justify-end mb-10">
                                 <div onClick={onClose}>
@@ -67,7 +66,7 @@ export default function AgentModal({ isOpen, onClose }: Props) {
                                 <h3 className="text-sm font-bold">Enable email access</h3>
                             </div>
                             <p className="text-sm">Allow the agent to access email inboxes to read mail from known vendors</p>
-                            <div className="flex gap-2">
+                            <div className="flex flex-col gap-3 md:flex-row md:gap-2">
                                 <div className="border border-gray-200 rounded px-2 py-1 flex-1">
                                     <div className="bg-[#f2f2f2] flex gap-2 w-fit rounded-2xl">
                                         <div className="size-6 rounded-full text-sm font-bold bg-pink-500 flex items-center justify-center">P</div>
@@ -77,7 +76,7 @@ export default function AgentModal({ isOpen, onClose }: Props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="px-5 py-2 font-bold text-white text-sm bg-blue-600 rounded-lg cursor-pointer hover:opacity-75 transition-all duration-300">Allow access</div>
+                                <div className="px-5 py-2 font-bold text-white text-sm bg-blue-600 rounded-lg cursor-pointer hover:opacity-75 transition-all duration-300 w-fit">Allow access</div>
                             </div>
                         </div>
                         <div className="mt-24 flex justify-end gap-2 ">

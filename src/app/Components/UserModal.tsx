@@ -28,13 +28,13 @@ export default function UserModal({ isOpen, onClose }: Props) {
         <Modal hideBackdrop={true} open={isOpen} onClose={onClose} sx={{ backdropFilter: "blur(5px)" }}>
             <div className="fixed inset-0 flex items-center justify-center">
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
-                <div className="lg:w-[900px] relative z-50 px-6 py-6 lg:px-0 lg:py-0">
+                <div className="lg:w-[900px] relative z-50 px-3 py-6 lg:px-0 lg:py-0">
 
                     <div className="absolute hidden -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl md:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
                         <ArrowForwardIosIcon sx={{ color: "blue" }} />
                     </div>
 
-                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[900px] modal-container overflow-auto rounded-2xl py-6 z-40">
+                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl py-6 z-40">
 
                         <div className="flex flex-col gap-4 px-3 md:px-8">
                             <div className="flex justify-between">

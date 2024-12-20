@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import AppsIcon from '@mui/icons-material/Apps';
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
@@ -6,13 +8,27 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 import SettingsIcon from '@mui/icons-material/Settings';
 import Image from "next/image";
+import MenuIcon from "@mui/icons-material/Menu";
 
-const Navbar = () => {
+type Props = {
+    openModal: () => void
+}
+
+
+const Navbar = ({ openModal }: Props) => {
     return (
         <div className="bg-[#000f28] h-10 flex items-center justify-between px-4 py-2 text-white">
             {/* Left Section */}
             <div className="flex items-center">
-                <AppsIcon />
+                <div className="flex gap-2">
+                    <div className="block md:hidden" onClick={openModal}>
+                        <MenuIcon />
+                    </div>
+                    <div className="hidden md:block">
+                        <AppsIcon />
+                    </div>
+
+                </div>
                 <div className="hidden md:flex items-center ">
                     <div className="text-[16px] font-bold ml-5">Dynamics 365</div>
                     <span className="mx-2">|</span>
@@ -32,6 +48,8 @@ const Navbar = () => {
                     <div className="size-3 bg-green-700 rounded-full absolute -right-1 top-4 border-2 border-white"></div>
                 </div>
             </div>
+
+
         </div>
     );
 };
