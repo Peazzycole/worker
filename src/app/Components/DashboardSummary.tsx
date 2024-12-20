@@ -56,7 +56,7 @@ const DashboardSummary = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="flex justify-center">
                         {isOpen ?
                             <div onClick={() => setIsOpen(false)}>
                                 <KeyboardArrowDownIcon className="cursor-pointer" sx={{ width: 40, height: 40 }} />
