@@ -45,7 +45,7 @@ export default function DashboardContent() {
                 </div>
             </div>
             <div className='bg-gray-200 w-[1px] mx-6'></div>
-            <div className='md:w-[30%] flex flex-col gap-4'>
+            <div className='md:w-[30%] mt-4 md:mt-0 flex flex-col gap-4'>
                 <h3 className='text-sm'>Other key activities</h3>
                 {/* first card */}
                 <div className='flex flex-col gap-2 border border-gray-200 px-4 py-2 rounded-xl shadow'>

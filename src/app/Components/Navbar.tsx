@@ -38,11 +38,11 @@ const Navbar = ({ openModal }: Props) => {
 
             {/* Right Section */}
             <div className="flex items-center space-x-4">
-                <LightbulbOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300" />
-                <AddOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300" />
-                <SettingsIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300" />
-                <HelpOutlineOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300" />
-                <AccountCircleOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300" />
+                <LightbulbOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300 transition-all duration-200" />
+                <AddOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300 transition-all duration-200" />
+                <SettingsIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300 transition-all duration-200" />
+                <HelpOutlineOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300 transition-all duration-200" />
+                <AccountCircleOutlinedIcon className="cursor-pointer text-[#4c556b] hover:text-gray-300 transition-all duration-200" />
                 <div className="size-6 rounded-full relative">
                     <Image src="/img1.png" alt="user image" width={24} height={24} className="rounded-full h-full w-full" />
                     <div className="size-3 bg-green-700 rounded-full absolute -right-1 top-4 border-2 border-white"></div>

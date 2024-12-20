@@ -36,7 +36,7 @@ const LeftSideBar = ({ openModal }: Props) => {
                 </div>
             </div>
             {/* Menu Items */}
-            <nav className={`${isOpen ? "" : "hidden"}`}>
+            <nav className={`transition-all duration-200 ease-in-out ${isOpen ? "max-w-[300px] opacity-100" : "max-w-0 opacity-0"}`}>
                 <ul className="space-y-2  overflow-hidden">
                     {/* Home */}
                     <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-white cursor-pointer">

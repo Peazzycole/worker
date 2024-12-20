@@ -33,7 +33,7 @@ const DashboardSummary = () => {
                                 <p className="text-xs">Target <span className="font-bold">$45 million</span></p>
                             </div>
                         </div>
-                        <div className="flex gap-4">
+                        <div className="flex gap-3 md:gap-4 flex-wrap mt-1 ">
                             <div className="flex items-center gap-1">
                                 <div className="size-2 bg-[#a6caa5] rounded-full"></div>
                                 <span className="text-xs">Won $18m</span>
@@ -69,9 +69,12 @@ const DashboardSummary = () => {
                     </div>
                 </div>
             </div>
-            {isOpen && <div>
+            <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-[900px]" : "max-h-0"}`}
+            >
                 <DashboardContent />
-            </div>}
+            </div>
+
         </div>
     );
 };
