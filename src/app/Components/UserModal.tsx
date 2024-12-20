@@ -28,15 +28,15 @@ export default function UserModal({ isOpen, onClose }: Props) {
         <Modal hideBackdrop={true} open={isOpen} onClose={onClose} sx={{ backdropFilter: "blur(5px)" }}>
             <div className="fixed inset-0 flex items-center justify-center">
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
-                <div className="w-[900px] relative z-50">
+                <div className="lg:w-[900px] relative z-50 px-6 py-6 lg:px-0 lg:py-0">
 
-                    <div className="absolute -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
+                    <div className="absolute hidden -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl md:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
                         <ArrowForwardIosIcon sx={{ color: "blue" }} />
                     </div>
 
-                    <div className="bg-[#f4f6f8] relative w-[900px] max-h-[900px] modal-container overflow-auto rounded-2xl py-6 z-40">
+                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[900px] modal-container overflow-auto rounded-2xl py-6 z-40">
 
-                        <div className="flex flex-col gap-4 px-8">
+                        <div className="flex flex-col gap-4 px-3 md:px-8">
                             <div className="flex justify-between">
                                 <div className="flex gap-2 items-center">
                                     <MarkEmailReadIcon />
@@ -60,7 +60,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-2  px-4 py-4 rounded-xl shadow  bg-gradient-to-br from-white via-white to-[#d4dbe4]">
-                                <div className="flex justify-between items-center w-full gap-2 bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-2 rounded-xl">
+                                <div className="flex justify-between md:items-center w-full gap-3 bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-2 rounded-xl flex-col md:flex-row">
                                     <p className="text-xs font-bold bg-gradient-to-r from-[#5373d4] to-[#7e47ec] bg-clip-text text-transparent">
                                         Jane may be interested in upgrading espresso machines for her in-store coffee shops
                                     </p>
@@ -104,39 +104,39 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                 <div className="bg-white px-4 py-4 rounded-xl shadow mt-2">
                                     <div className="bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-4 rounded-xl">
                                         <h5 className="text-sm font-bold bg-gradient-to-r from-[#5373d4] to-[#7e47ec] bg-clip-text text-transparent mb-2">Why I picked this lead</h5>
-                                        <div>
+                                        <div className="flex flex-col gap-2 md:gap-0">
                                             <div className="flex items-center gap-1 ml-4">
-                                                <div className="size-1 bg-black rounded-full"></div>
+                                                <div className="size-1 bg-black rounded-full hidden md:block"></div>
                                                 <p className="text-sm">Jane us a <span className="font-bold">Key decision maker </span> and was browsing <span className="font-bold">`espresso machines`</span> on First Coffees website.</p>
-                                                <div className="bg-white size-2 items-center justify-center text-xs text-black">1</div>
+                                                <div className="bg-white size-2 flex items-center justify-center text-xs text-black">1</div>
                                             </div>
                                             <div className="flex items-center gap-1 ml-4">
-                                                <div className="size-1 bg-black rounded-full"></div>
+                                                <div className="size-1 bg-black rounded-full hidden md:block"></div>
                                                 <p className="text-sm">Multiple people at her company have reported `slowness` during <span className="font-bold">service requests</span></p>
-                                                <div className="bg-white size-2 items-center justify-center text-xs text-black">2</div>
+                                                <div className="bg-white size-2 flex items-center justify-center text-xs text-black">2</div>
                                             </div>
                                             <div className="flex items-center gap-1 ml-4">
-                                                <div className="size-1 bg-black rounded-full"></div>
+                                                <div className="size-1 bg-black rounded-full hidden md:block"></div>
                                                 <p className="text-sm">Northwind Traders currently <span className="font-bold">$200M in revenue</span> from their in-store coffee shops</p>
-                                                <div className="bg-white size-2 items-center justify-center text-xs text-black">3</div>
+                                                <div className="bg-white size-2 flex items-center justify-center text-xs text-black">3</div>
                                             </div>
                                         </div>
-                                        <div className="mt-3 ml-4 flex gap-2">
-                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow w-fit">
+                                        <div className="mt-3 pl-4 pr-4 md:pr-0 flex flex-col gap-2 w-full">
+                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md:w-fit w-full">
                                                 <Image src="/cele1.svg" alt="" width={40} height={40} />
                                                 <div className="flex flex-col justify-between">
                                                     <span className="text-xs">Decision maker</span>
                                                     <span className="text-sm font-bold bg-gradient-to-r from-[#7e47ec] to-[#5373d4] bg-clip-text text-transparent">Yes</span>
                                                 </div>
                                             </div>
-                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow w-fit">
+                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md:w-fit w-full">
                                                 <Image src="/cele2.svg" alt="" width={40} height={40} />
                                                 <div className="flex flex-col justify-between">
                                                     <span className="text-xs">Potential deal value</span>
                                                     <span className="text-sm font-bold bg-gradient-to-r from-[#7e47ec] to-[#5373d4] bg-clip-text text-transparent">$1M</span>
                                                 </div>
                                             </div>
-                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow w-fit">
+                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md:w-fit w-full">
                                                 <Image src="/engagement.svg" alt="" width={40} height={40} />
                                                 <div className="flex flex-col justify-between">
                                                     <span className="text-xs">Intent</span>
@@ -145,7 +145,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="flex justify-between items-center mt-2">
+                                    <div className="flex flex-col md:flex-row justify-between gap-2 md:items-center mt-2">
                                         <div className="flex items-center gap-1">
                                             <div className="size-5 bg-gray-200 flex items-center justify-center rounded">
                                                 <SecurityIcon sx={{ width: 16, height: 16, color: "yellow" }} />
@@ -182,7 +182,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                 <span>|</span>
                                 <span className="text-sm whitespace-nowrap font-bold text-[#5c48cc]">Show all</span>
                             </div>
-                            <div className='w-full flex items-center justify-center mt-2 gap-1'>
+                            <div className='w-full hidden md:flex items-center justify-center mt-2 gap-1'>
                                 <div className='bg-[#5c48cc] rounded w-10  h-[4px]'></div>
                                 <div className='bg-gray-300 rounded w-1  h-[4px]'></div>
                                 <div className='bg-gray-300 rounded w-1  h-[4px]'></div>

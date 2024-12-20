@@ -8,7 +8,7 @@ export default function DashboardContent() {
         <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col gap-4'>
                 <p className='text-sm'>Copilot has pinpointed 20 key leads that show strong purchase intent and are actively engaging. These leads need your focus</p>
-                <div className='flex flex-col mf:flex-row gap-4'>
+                <div className='flex flex-col md:flex-row gap-4'>
                     <div className='flex-1'>
                         <DashboardUserCard />
                     </div>
