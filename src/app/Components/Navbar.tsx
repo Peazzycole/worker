@@ -21,10 +21,10 @@ const Navbar = ({ openModal }: Props) => {
             {/* Left Section */}
             <div className="flex items-center">
                 <div className="flex gap-2">
-                    <div className="block md:hidden" onClick={openModal}>
+                    <div className="block lg:hidden" onClick={openModal}>
                         <MenuIcon />
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden lg:block">
                         <AppsIcon />
                     </div>
 

@@ -1,19 +1,40 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import DashboardUserCard from './Ui/DashboardUserCard'
 import Image from 'next/image'
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
+import UserModal from './UserModal';
 
 export default function DashboardContent() {
+    const [isOpen, setIsOpen] = useState(false)
+    const [selectedIndex, setSelectedIndex] = useState(0)
+
+    const user = selectedIndex == 0 ? {
+        name: "Josia Love",
+        image: "/img2.png"
+    } :
+        {
+            name: "Harrison Curtis",
+            image: "/img3.png"
+        }
+
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col gap-4'>
                 <p className='text-sm'>Copilot has pinpointed 20 key leads that show strong purchase intent and are actively engaging. These leads need your focus</p>
                 <div className='flex flex-col md:flex-row gap-4'>
-                    <div className='flex-1'>
-                        <DashboardUserCard />
+                    <div className='flex-1' onClick={() => {
+                        setSelectedIndex(0)
+                        setIsOpen(true)
+                    }}>
+                        <DashboardUserCard name='Josia Love' image="/img2.png" topic='Upgrading service plan' />
                     </div>
-                    <div className='flex-1'>
-                        <DashboardUserCard />
+                    <div className='flex-1' onClick={() => {
+                        setSelectedIndex(1)
+                        setIsOpen(true)
+                    }}>
+                        <DashboardUserCard name='Harrison Curtis' image="/img3.png" topic='Issue with throughput on EspressoMaster' />
                     </div>
                 </div>
                 <div className='w-full flex items-center justify-center mt-2 gap-1'>
@@ -35,7 +56,7 @@ export default function DashboardContent() {
                         </div>
                         <div className='flex flex-col justify-between'>
                             <span className='text-xs font-bold'>Cafe A100 for Woodland Bank</span>
-                            <div className='flex items-center gap-1 text-xs'>
+                            <div className='flex items-center gap-1 text-xs flex-wrap'>
                                 <span>Woodland Bank</span>
                                 <div className='size-1 bg-black rounded-full'></div>
                                 <span>$280,000 </span>
@@ -62,7 +83,7 @@ export default function DashboardContent() {
                         </div>
                         <div className='flex flex-col justify-between'>
                             <span className='text-xs font-bold'>Partnership opportunity for Fabrikam</span>
-                            <div className='flex items-center gap-1 text-xs'>
+                            <div className='flex items-center gap-1 text-xs flex-wrap'>
                                 <span>Fabrikam</span>
                                 <div className='size-1 bg-black rounded-full'></div>
                                 <span>$5,000,000 </span>
@@ -83,6 +104,8 @@ export default function DashboardContent() {
                 </div>
                 <span className='font-bold text-sm text-[#5c48cc]'>Show all key activities</span>
             </div>
+
+            <UserModal isOpen={isOpen} onClose={() => setIsOpen(false)} user={user} />
         </div>
     )
 }

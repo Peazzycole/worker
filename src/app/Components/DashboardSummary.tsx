@@ -12,13 +12,13 @@ const DashboardSummary = () => {
         <div className="dashboard-container rounded-lg p-6 shadow-xl">
             <div>
                 {/* Header Section */}
-                <div className="mb-6 flex flex-col md:flex-row items-center gap-2">
+                <div className="mb-6 flex flex-col xl:flex-row xl:items-center gap-2">
                     <Image src="/copilot.svg" alt="copilot image" width={24} height={24} />
                     <h2 className="text-lg font-semibold text-gray-800">
                         Hi Mona, <span className="text-blue-600 font-bold">68%</span> of goal
                         achieved and rest can be achieved by focusing on 20 top leads.
                     </h2>
-                    <div className="flex-1 md:ml-4 flex flex-col gap-1">
+                    <div className="flex-1 xl:ml-4 flex flex-col gap-1">
                         <div className="flex justify-between">
                             <span className="text-xs">1 month until Q4</span>
                             <span className="text-xs">68% of target achieved</span>
@@ -28,7 +28,7 @@ const DashboardSummary = () => {
                             <div className="bg-[#85b4f3] w-[5%]"></div>
                             <div className="bg-[#e2abff] w-[6%]"></div>
                             <div className="bg-[#fdca89] w-[2%]"></div>
-                            <div className="absolute bottom-0 items-start right-1/3 gap-1 hidden xl:flex">
+                            <div className="absolute bottom-0 items-start right-1/3 gap-1 hidden 2xl:flex">
                                 <div className="h-6 w-[1px] bg-black"></div>
                                 <p className="text-xs">Target <span className="font-bold">$45 million</span></p>
                             </div>

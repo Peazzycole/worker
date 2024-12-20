@@ -17,9 +17,10 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 type Props = {
     isOpen: boolean
     onClose: () => void
+    user: { name: string, image: string }
 }
 
-export default function UserModal({ isOpen, onClose }: Props) {
+export default function UserModal({ isOpen, onClose, user }: Props) {
     const [activeMenuItem, setActiveMenuItem] = useState<string>("Research");
     const [hoveredMenuItem, setHoveredMenuItem] = useState<string>("");
 
@@ -30,7 +31,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
                 <div className="lg:w-[900px] relative z-50 px-3 py-6 lg:px-0 lg:py-0">
 
-                    <div className="absolute hidden -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl md:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
+                    <div className="absolute hidden -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl lg:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
                         <ArrowForwardIosIcon sx={{ color: "blue" }} />
                     </div>
 
@@ -40,7 +41,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                             <div className="flex justify-between">
                                 <div className="flex gap-2 items-center">
                                     <MarkEmailReadIcon />
-                                    <h1>Engage with Jane Reyes</h1>
+                                    <h1>Engage with Jane {user.name}</h1>
                                 </div>
                                 <div onClick={onClose}>
                                     <CloseIcon className="cursor-pointer" />
@@ -48,11 +49,11 @@ export default function UserModal({ isOpen, onClose }: Props) {
                             </div>
                             <div className='flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow'>
                                 <div className="size-10 rounded-full relative">
-                                    <Image src="/img1.png" alt="user image" width={40} height={40} className="rounded-full h-full w-full" />
+                                    <Image src={user.image} alt="user image" width={40} height={40} className="rounded-full h-full w-full" />
                                     <div className="size-3 bg-green-700 rounded-full absolute -right-1 top-4 border-2 border-white"></div>
                                 </div>
                                 <div className='flex flex-col justify-between'>
-                                    <span className='text-xs font-bold'>Jane Reyes</span>
+                                    <span className='text-xs font-bold'>{user.name}</span>
                                     <div className='flex items-center gap-1 text-xs'>
                                         <Image src="/linkedin.svg" alt="linkedin icon" width={16} height={16} />
                                         <span>COO Northwind Traders</span>
@@ -62,7 +63,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                             <div className="flex flex-col gap-2  px-4 py-4 rounded-xl shadow  bg-gradient-to-br from-white via-white to-[#d4dbe4]">
                                 <div className="flex justify-between md:items-center w-full gap-3 bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-2 rounded-xl flex-col md:flex-row">
                                     <p className="text-xs font-bold bg-gradient-to-r from-[#5373d4] to-[#7e47ec] bg-clip-text text-transparent">
-                                        Jane may be interested in upgrading espresso machines for her in-store coffee shops
+                                        {user.name.split(' ')[0]} may be interested in upgrading espresso machines for her in-store coffee shops
                                     </p>
                                     <div className="flex gap-3">
                                         <div className="flex items-center gap-1 bg-white px-2 py-1">
@@ -107,7 +108,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                         <div className="flex flex-col gap-2 md:gap-0">
                                             <div className="flex items-center gap-1 ml-4">
                                                 <div className="size-1 bg-black rounded-full hidden md:block"></div>
-                                                <p className="text-sm">Jane us a <span className="font-bold">Key decision maker </span> and was browsing <span className="font-bold">`espresso machines`</span> on First Coffees website.</p>
+                                                <p className="text-sm">{user.name.split(' ')[0]}us a <span className="font-bold">Key decision maker </span> and was browsing <span className="font-bold">`espresso machines`</span> on First Coffees website.</p>
                                                 <div className="bg-white size-2 flex items-center justify-center text-xs text-black">1</div>
                                             </div>
                                             <div className="flex items-center gap-1 ml-4">
@@ -121,22 +122,22 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                                 <div className="bg-white size-2 flex items-center justify-center text-xs text-black">3</div>
                                             </div>
                                         </div>
-                                        <div className="mt-3 pl-4 pr-4 md:pr-0 flex flex-col gap-2 w-full">
-                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md:w-fit w-full">
+                                        <div className="mt-3 pl-4 pr-4 md:pr-0 flex flex-col md:flex-row  gap-2 w-full">
+                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md lg:w-[200px] w-full">
                                                 <Image src="/cele1.svg" alt="" width={40} height={40} />
                                                 <div className="flex flex-col justify-between">
                                                     <span className="text-xs">Decision maker</span>
                                                     <span className="text-sm font-bold bg-gradient-to-r from-[#7e47ec] to-[#5373d4] bg-clip-text text-transparent">Yes</span>
                                                 </div>
                                             </div>
-                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md:w-fit w-full">
+                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow lg:w-[200px]  w-full">
                                                 <Image src="/cele2.svg" alt="" width={40} height={40} />
                                                 <div className="flex flex-col justify-between">
                                                     <span className="text-xs">Potential deal value</span>
                                                     <span className="text-sm font-bold bg-gradient-to-r from-[#7e47ec] to-[#5373d4] bg-clip-text text-transparent">$1M</span>
                                                 </div>
                                             </div>
-                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow md:w-fit w-full">
+                                            <div className="flex gap-3 items-center bg-white px-4 py-4 rounded-xl shadow lg:w-[200px]  w-full">
                                                 <Image src="/engagement.svg" alt="" width={40} height={40} />
                                                 <div className="flex flex-col justify-between">
                                                     <span className="text-xs">Intent</span>
@@ -167,7 +168,7 @@ export default function UserModal({ isOpen, onClose }: Props) {
                                     </div>
                                 </div>
                                 <div className="bg-white px-4 py-1 rounded-xl shadow mt-4">
-                                    <CustomAccordion title="About Jane">
+                                    <CustomAccordion title={`About ${user.name.split(' ')[0]}`}>
                                         <p className="text-sm leading-6">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni, non tempora ab ut pariatur cum nemo dolorum officiis suscipit, doloremque animi incidunt eaque ducimus impedit natus deleniti ratione blanditiis.
                                             Odit magni, non tempora ab ut pariatur cum nemo dolorum officiis suscipit, doloremque animi incidunt eaque ducimus impedit natus deleniti ratione blanditiis
