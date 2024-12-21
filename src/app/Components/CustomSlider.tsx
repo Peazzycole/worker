@@ -59,8 +59,8 @@ export default function CustomSlider({ setIndex, openModal }: Props) {
                 </div>
             </Swiper>
             <div className='bg-secondary-50 swiper-button-nextt cursor-pointer hidden absolute md:-right-5 lg:-right-0 xl:-right-10 top-1/2 transform -translate-y-1/2 z-50 p-[10px] md:flex items-center justify-center rounded-full'>
-                <div className=" bg-white size-14 shadow-2xl flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
-                    <ArrowForwardIosIcon sx={{ color: "blue" }} />
+                <div className=" bg-white size-12 shadow-2xl flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
+                    <ArrowForwardIosIcon sx={{ color: "blue", width: 24, height: 24 }} />
                 </div>
             </div>
 

@@ -22,7 +22,7 @@ export default function AgentModal({ isOpen, onClose }: Props) {
             <div className="fixed inset-0 flex items-center justify-center">
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
                 <div className="w-full lg:w-[900px] relative z-50 px-3 ">
-                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl px-10 p-6 z-40">
+                    <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl px-6 md:px-10 p-6 z-40">
                         <div className="flex flex-col gap-4">
                             <div className="flex justify-end mb-10">
                                 <div onClick={onClose}>

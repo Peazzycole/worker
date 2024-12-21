@@ -34,7 +34,7 @@ export default function DashboardUserCard({ name, image, topic }: Props) {
                     <p className='text-sm'>{name.split(" ")[0]} may be interested in upgrading espresso machines for her in-store coffee shops</p>
 
                 </div>
-                <div className='flex flex-col xl:flex-row xl:items-center gap-1 text-xs'>
+                <div className='flex flex-col xl:flex-row xl:items-center gap-2 text-xs flex-wrap'>
                     <span className=''>Expand business</span>
                     <div className='size-1 bg-black rounded-full hidden xl:block'></div>
                     <span>{topic}</span>
