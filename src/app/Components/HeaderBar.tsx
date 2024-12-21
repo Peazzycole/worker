@@ -29,52 +29,52 @@ const HeaderBar = () => {
             {/* Action Icons */}
             <div className="flex items-center gap-3">
                 <div className="flex items-center space-x-4">
-                    <Tooltip title="Show chart">
+                    <Tooltip title="Display a detailed chart view" arrow={true}>
                         <div className="flex gap-1 cursor-pointer items-center ">
                             <ShowChartIcon sx={{ width: 20, height: 20 }} />
                             <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Show chart</span>
                         </div>
                     </Tooltip>
 
-                    <Tooltip title="Focused view">
+                    <Tooltip title="Switch to a focused view for better analysis" arrow={true}>
                         <div className="flex gap-1 cursor-pointer items-center">
                             <ViewListIcon sx={{ width: 20, height: 20 }} />
                             <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Focused view</span>
                         </div>
                     </Tooltip>
 
-                    <Tooltip title="New">
+                    <Tooltip title="Create a new item or entry" arrow={true}>
                         <div className="flex gap-1 cursor-pointer items-center">
-                            <AddIcon sx={{ width: 20, height: 20 }} />
+                            <AddIcon sx={{ width: 20, height: 20, color: "green" }} />
                             <span className="text-xs text-[#797979] font-bold whitespace-nowrap">New</span>
                         </div>
                     </Tooltip>
 
-                    <Tooltip title="Refresh">
+                    <Tooltip title="Reload or update the data" arrow={true}>
                         <div className="flex gap-1 cursor-pointer items-center">
                             <RefreshIcon sx={{ width: 20, height: 20 }} />
                             <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Refresh</span>
                         </div>
                     </Tooltip>
 
-                    <Tooltip title="Collaborate">
+                    <Tooltip title="Invite others to collaborate on this item" arrow={true}>
                         <div className="flex gap-1 cursor-pointer items-center">
-                            <GroupIcon sx={{ width: 20, height: 20 }} />
+                            <GroupIcon sx={{ width: 20, height: 20, color: "blueviolet" }} />
                             <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Collaborate</span>
                         </div>
                     </Tooltip>
 
-                    <Tooltip title="Delete">
+                    <Tooltip title="Remove this item permanently" arrow={true}>
                         <div className="flex gap-1 cursor-pointer items-center">
                             <DeleteIcon sx={{ width: 20, height: 20 }} />
                             <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Delete</span>
                         </div>
                     </Tooltip>
 
-                    <Tooltip title="Smart data">
+                    <Tooltip title="Open settings or configure options">
                         <div className="flex gap-1 cursor-pointer items-center">
                             <SettingsIcon sx={{ width: 20, height: 20 }} />
-                            <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Show chart</span>
+                            <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Setting</span>
                         </div>
                     </Tooltip>
 
@@ -83,20 +83,20 @@ const HeaderBar = () => {
                 <div className="flex items-center gap-3">
                     <div className="flex items-center">
                         <span className="text-gray-200">|</span>
-                        <KeyboardArrowDownIcon sx={{ width: 20, height: 20 }} />
+                        <KeyboardArrowDownIcon className="cursor-pointer" sx={{ width: 20, height: 20 }} />
                     </div>
                     <div>
-                        <MoreVertIcon sx={{ width: 20, height: 20 }} />
+                        <MoreVertIcon className="cursor-pointer" sx={{ width: 20, height: 20 }} />
                     </div>
-                    <div className="flex items-center border border-gray-200 py-1 px-2 rounded">
+                    <div className="flex items-center border border-gray-200 py-1 px-2 rounded cursor-pointer hover:bg-gray-100 transition-all duration-300">
                         <PieChartIcon sx={{ width: 20, height: 20 }} />
                         <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Smart data</span>
                     </div>
-                    <div className="flex items-center border border-gray-200 py-1 px-2 rounded">
+                    <div className="flex items-center border border-gray-200 py-1 px-2 rounded cursor-pointer hover:bg-gray-100 transition-all duration-300">
                         <FilterListIcon sx={{ width: 20, height: 20 }} />
                         <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Edit filters</span>
                     </div>
-                    <div className="flex items-center border border-gray-200 py-1 px-2 rounded">
+                    <div className="flex items-center border border-gray-200 py-1 px-2 rounded cursor-pointer hover:bg-gray-100 transition-all duration-300">
                         <EditNoteIcon sx={{ width: 20, height: 20 }} />
                         <span className="text-xs text-[#797979] font-bold whitespace-nowrap">Edit columns</span>
                     </div>
