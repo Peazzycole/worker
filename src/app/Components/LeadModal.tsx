@@ -46,7 +46,7 @@ export default function LeadModal({ isOpen, onClose, user }: Props) {
                                 </div>
                                 <p className='text-sm'>{user.description}</p>
                             </div>
-                            <div className='flex items-center gap-1 text-xs'>
+                            <div className='flex items-center gap-2 text-xs flex-wrap'>
                                 <span className=''>Expand business</span>
                                 <div className='size-1 bg-black rounded-full'></div>
                                 <span>{user.topic}</span>
