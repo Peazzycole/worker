@@ -10,8 +10,8 @@ type Props = {
 
 export default function DashboardUserCard({ name, image, topic }: Props) {
     return (
-        <div className='cursor-pointer'>
-            <div className='flex border border-gray-200 p-4 rounded-2xl shadow flex-col gap-4'>
+        <div className='cursor-pointer h-full flex-1'>
+            <div className='flex border border-gray-200 p-4 h-full rounded-2xl shadow flex-col gap-4'>
                 <div className='flex items-center gap-2'>
                     <div className="size-8 rounded-full relative">
                         <Image src={image} alt="user image" width={32} height={32} className="rounded-full h-full w-full" />

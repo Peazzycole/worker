@@ -35,7 +35,10 @@ export default function AgentModal({ isOpen, onClose }: Props) {
                             </div>
                         </div>
                         <div className="bg-white px-4 py-1 rounded-xl shadow mt-4">
-                            <CustomAccordion title="Check if on-hand inventory will allow all sales orders to ship without delay">
+                            <CustomAccordion
+                                title="Check if on-hand inventory will allow all sales orders to ship without delay"
+                                expanded={false}
+                            >
                                 <div className="text-sm leading-6">
                                     When <p className="bg-[#c1d8ec] px-2 py-1 inline-flex items-center gap-1 rounded-xl w-fit align-middle my-1">
                                         <Face6Icon sx={{ color: "#3e95e0" }} />

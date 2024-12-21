@@ -1,51 +1,27 @@
 "use client"
 
 import React, { useState } from 'react'
-import DashboardUserCard from './Ui/DashboardUserCard'
 import Image from 'next/image'
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import UserModal from './UserModal';
+import CustomSlider from './CustomSlider';
+import { users } from '../data';
 
 export default function DashboardContent() {
     const [isOpen, setIsOpen] = useState(false)
     const [selectedIndex, setSelectedIndex] = useState(0)
 
-    const user = selectedIndex == 0 ? {
-        name: "Josia Love",
-        image: "/img2.png"
-    } :
-        {
-            name: "Harrison Curtis",
-            image: "/img3.png"
-        }
-
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col gap-4'>
                 <p className='text-sm'>Copilot has pinpointed 20 key leads that show strong purchase intent and are actively engaging. These leads need your focus</p>
-                <div className='flex flex-col md:flex-row gap-4'>
-                    <div className='flex-1' onClick={() => {
-                        setSelectedIndex(0)
-                        setIsOpen(true)
-                    }}>
-                        <DashboardUserCard name='Josia Love' image="/img2.png" topic='Upgrading service plan' />
-                    </div>
-                    <div className='flex-1' onClick={() => {
-                        setSelectedIndex(1)
-                        setIsOpen(true)
-                    }}>
-                        <DashboardUserCard name='Harrison Curtis' image="/img3.png" topic='Issue with throughput on EspressoMaster' />
-                    </div>
-                </div>
-                <div className='w-full flex items-center justify-center mt-2 gap-1'>
-                    <div className='bg-[#5c48cc] rounded w-10  h-[4px]'></div>
-                    <div className='bg-gray-200 rounded w-1  h-[4px]'></div>
-                    <div className='bg-gray-200 rounded w-1  h-[4px]'></div>
-                    <div className='bg-gray-200 rounded w-1  h-[4px]'></div>
+
+                <div className='h-full w-full flex-1 relative'>
+                    <CustomSlider setIndex={(indx) => setSelectedIndex(indx)} openModal={() => setIsOpen(true)} />
                 </div>
             </div>
             <div className='bg-gray-200 w-[1px] mx-6'></div>
-            <div className='md:w-[30%] mt-4 md:mt-0 flex flex-col gap-4'>
+            <div className='flex-1 mt-4 md:mt-0 flex flex-col gap-4'>
                 <h3 className='text-sm'>Other key activities</h3>
                 {/* first card */}
                 <div className='flex flex-col gap-2 border border-gray-200 px-4 py-2 rounded-xl shadow'>
@@ -105,7 +81,7 @@ export default function DashboardContent() {
                 <span className='font-bold text-sm text-[#5c48cc]'>Show all key activities</span>
             </div>
 
-            <UserModal isOpen={isOpen} onClose={() => setIsOpen(false)} user={user} />
+            <UserModal isOpen={isOpen} onClose={() => setIsOpen(false)} user={users[selectedIndex]} />
         </div>
     )
 }

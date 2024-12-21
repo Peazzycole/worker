@@ -12,7 +12,7 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import CustomAccordion from "./Ui/CustomAccordion";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 type Props = {
     isOpen: boolean
@@ -31,9 +31,9 @@ export default function UserModal({ isOpen, onClose, user }: Props) {
                 <Backdrop className="z-10 relative" open={isOpen} onClick={onClose} />
                 <div className="lg:w-[900px] relative z-50 px-3 py-6 lg:px-0 lg:py-0">
 
-                    <div className="absolute hidden -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl lg:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
+                    {/* <div className="absolute hidden -right-6 z-50 transform -translate-y-1/2 top-1/2 bg-white size-14 shadow-2xl lg:flex items-center justify-center rounded-full border-2 border-gray-200 cursor-pointer">
                         <ArrowForwardIosIcon sx={{ color: "blue" }} />
-                    </div>
+                    </div> */}
 
                     <div className="bg-[#f4f6f8] relative lg:w-[900px] max-h-[calc(100vh-100px)] modal-container overflow-auto rounded-2xl py-6 z-40">
 
@@ -168,7 +168,7 @@ export default function UserModal({ isOpen, onClose, user }: Props) {
                                     </div>
                                 </div>
                                 <div className="bg-white px-4 py-1 rounded-xl shadow mt-4">
-                                    <CustomAccordion title={`About ${user.name.split(' ')[0]}`}>
+                                    <CustomAccordion expanded={true} title={`About ${user.name.split(' ')[0]}`}>
                                         <p className="text-sm leading-6">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni, non tempora ab ut pariatur cum nemo dolorum officiis suscipit, doloremque animi incidunt eaque ducimus impedit natus deleniti ratione blanditiis.
                                             Odit magni, non tempora ab ut pariatur cum nemo dolorum officiis suscipit, doloremque animi incidunt eaque ducimus impedit natus deleniti ratione blanditiis
@@ -183,12 +183,12 @@ export default function UserModal({ isOpen, onClose, user }: Props) {
                                 <span>|</span>
                                 <span className="text-sm whitespace-nowrap font-bold text-[#5c48cc]">Show all</span>
                             </div>
-                            <div className='w-full hidden md:flex items-center justify-center mt-2 gap-1'>
+                            {/* <div className='w-full hidden md:flex items-center justify-center mt-2 gap-1'>
                                 <div className='bg-[#5c48cc] rounded w-10  h-[4px]'></div>
                                 <div className='bg-gray-300 rounded w-1  h-[4px]'></div>
                                 <div className='bg-gray-300 rounded w-1  h-[4px]'></div>
                                 <div className='bg-gray-300 rounded w-1  h-[4px]'></div>
-                            </div>
+                            </div> */}
                             <div className="flex items-center gap-2">
                                 <ThumbUpOffAltIcon sx={{ width: 16, height: 16, color: "gray" }} />
                                 <ThumbDownOffAltIcon sx={{ width: 16, height: 16, color: "gray" }} />
