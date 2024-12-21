@@ -68,9 +68,8 @@ export default function CustomSlider({ setIndex, openModal }: Props) {
                 {users.map((_, index) => (
                     <button
                         key={index}
-                        className={`rounded h-[4px] ${activeIndex === index ? 'bg-[#5c48cc] w-10 ' : 'bg-gray-200 w-1'
+                        className={`rounded h-[4px] cursor-default ${activeIndex === index ? 'bg-[#5c48cc] w-10 ' : 'bg-gray-200 w-1'
                             }`}
-                        onClick={() => setActiveIndex(index)}
                     ></button>
                 ))}
             </div>

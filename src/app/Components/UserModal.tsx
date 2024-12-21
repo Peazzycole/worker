@@ -60,7 +60,7 @@ export default function UserModal({ isOpen, onClose, user }: Props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-2  px-4 py-4 rounded-xl shadow  bg-gradient-to-br from-white via-white to-[#d4dbe4]">
+                            <div className="flex flex-col gap-2  px-2 sm:px-4 py-4 rounded-xl shadow  bg-gradient-to-br from-white via-white to-[#d4dbe4]">
                                 <div className="flex justify-between md:items-center w-full gap-3 bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-2 rounded-xl flex-col md:flex-row">
                                     <p className="text-xs font-bold bg-gradient-to-r from-[#5373d4] to-[#7e47ec] bg-clip-text text-transparent">
                                         {user.name.split(' ')[0]} may be interested in upgrading espresso machines for her in-store coffee shops
@@ -102,13 +102,13 @@ export default function UserModal({ isOpen, onClose, user }: Props) {
                                     </div>
                                 </div>
 
-                                <div className="bg-white px-4 py-4 rounded-xl shadow mt-2">
+                                <div className="bg-white px-2 sm:px-4 py-4 rounded-xl shadow mt-2">
                                     <div className="bg-gradient-to-tr from-[#ebf3ff] to-[#ececfe] px-4 py-4 rounded-xl">
                                         <h5 className="text-sm font-bold bg-gradient-to-r from-[#5373d4] to-[#7e47ec] bg-clip-text text-transparent mb-2">Why I picked this lead</h5>
                                         <div className="flex flex-col gap-2 md:gap-0">
                                             <div className="flex items-center gap-1 ml-4">
                                                 <div className="size-1 bg-black rounded-full hidden md:block"></div>
-                                                <p className="text-sm">{user.name.split(' ')[0]}us a <span className="font-bold">Key decision maker </span> and was browsing <span className="font-bold">`espresso machines`</span> on First Coffees website.</p>
+                                                <p className="text-sm">{user.name.split(' ')[0]} is a <span className="font-bold">Key decision maker </span> and was browsing <span className="font-bold">`espresso machines`</span> on First Coffees website.</p>
                                                 <div className="bg-white size-2 flex items-center justify-center text-xs text-black">1</div>
                                             </div>
                                             <div className="flex items-center gap-1 ml-4">
@@ -168,7 +168,7 @@ export default function UserModal({ isOpen, onClose, user }: Props) {
                                     </div>
                                 </div>
                                 <div className="bg-white px-4 py-1 rounded-xl shadow mt-4">
-                                    <CustomAccordion expanded={true} title={`About ${user.name.split(' ')[0]}`}>
+                                    <CustomAccordion expanded={false} title={`About ${user.name.split(' ')[0]}`}>
                                         <p className="text-sm leading-6">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni, non tempora ab ut pariatur cum nemo dolorum officiis suscipit, doloremque animi incidunt eaque ducimus impedit natus deleniti ratione blanditiis.
                                             Odit magni, non tempora ab ut pariatur cum nemo dolorum officiis suscipit, doloremque animi incidunt eaque ducimus impedit natus deleniti ratione blanditiis
